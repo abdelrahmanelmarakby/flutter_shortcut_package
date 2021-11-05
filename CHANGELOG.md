@@ -1,0 +1,10 @@
+## [0.0.1] - 2021-11-04
+
+* 1-custom `text` widget to ease its usage
+* 2- custom `text field` widget with cool validation UI
+* 3-super cool animated `splash screen`
+* 4- easy to use `geolocator` location service
+* 5- dart extension to convert default colors to hex colors
+* 6-dynamic theme with persistence that can be implemented in 1 min
+* 7-the easiest localization implementation
+* 8-credit card widget
