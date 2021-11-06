@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
+
 //* USE LIKE THIS var location=LocatorService.determinePosition();
 class LocatorService {
-  static Future<Position?> determinePosition() async {
+  static Future<Position?> determinePosition(
+      {required Widget backToHomeScreenWidget,
+      required BuildContext context}) async {
     bool serviceEnabled;
     LocationPermission permission;
     Position location;
-    // Test if location services are enabled.
-    
 
+    // Test if location services are enabled.
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
@@ -26,8 +28,9 @@ class LocatorService {
                 //  backgroundColor: Colors.green.shade200,
               ),
               onPressed: () {
-                //TODO : GO TO YOUR PREFERED SCREEN
-                //Get.offAllNamed(Routes.HOME);
+                // : GO TO YOUR PREFERED SCREEN
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
               },
               icon: const Icon(
                 Icons.clear,
@@ -35,7 +38,6 @@ class LocatorService {
               ),
               label: const Text(
                 "close",
-               
               )),
           TextButton.icon(
               style: TextButton.styleFrom(
@@ -71,7 +73,6 @@ class LocatorService {
       Get.defaultDialog(
         barrierDismissible: false,
         title: "Location must be enabled ",
-        
         middleText:
             "Please enable location permissionto use this feature and try again",
         actions: [
@@ -82,9 +83,9 @@ class LocatorService {
                 //  backgroundColor: Colors.green.shade200,
               ),
               onPressed: () {
-                
-                //TODO : GO TO YOUR PREFERED SCREEN
-               // Get.offAllNamed(Routes.HOME);
+                //  GO TO YOUR PREFERED SCREEN
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
               },
               icon: const Icon(
                 Icons.clear,
@@ -124,7 +125,6 @@ class LocatorService {
       Get.defaultDialog(
         barrierDismissible: false,
         title: "Location must be enabled ",
-       
         middleText:
             "Please enable location permissionto use this feature and try again",
         actions: [
@@ -135,7 +135,8 @@ class LocatorService {
                 //  backgroundColor: Colors.green.shade200,
               ),
               onPressed: () {
-             //   Get.offAllNamed(Routes.HOME);
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
               },
               icon: const Icon(
                 Icons.clear,
@@ -165,7 +166,8 @@ class LocatorService {
 
       //Geolocator.openLocationSettings();
       if (!serviceEnabled) {
-        // Get.offAllNamed(Routes.HOME);
+        Navigator.of(context).pop();
+        Navigator.of(context).pop();
       }
 
       return Future.error('Location services are disabled.');

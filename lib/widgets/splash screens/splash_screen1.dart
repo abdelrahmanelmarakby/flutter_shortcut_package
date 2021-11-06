@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -11,7 +10,15 @@ class SplashScreen1Sub extends StatefulWidget {
   final Color backgroundColor;
   final Duration duration;
   final Curve curve;
-  const SplashScreen1Sub({required this.homePage,Key? key,required this.logo, required this.slogan, this.backgroundColor=Colors.white, this.duration=const Duration(milliseconds:800 ), this.curve=Curves.easeIn}) : super(key: key);
+  const SplashScreen1Sub(
+      {required this.homePage,
+      Key? key,
+      required this.logo,
+      required this.slogan,
+      this.backgroundColor = Colors.white,
+      this.duration = const Duration(milliseconds: 1000),
+      this.curve = Curves.easeIn})
+      : super(key: key);
 
   @override
   _SplashScreen1SubState createState() => _SplashScreen1SubState();
@@ -31,11 +38,10 @@ class _SplashScreen1SubState extends State<SplashScreen1Sub>
   void initState() {
     super.initState();
 
-    _controller =
-        AnimationController(vsync: this, duration: widget.duration);
+    _controller = AnimationController(vsync: this, duration: widget.duration);
 
-    animation1 = Tween<double>(begin: 120, end: 20).animate(CurvedAnimation(
-        parent: _controller, curve: widget.curve))
+    animation1 = Tween<double>(begin: 120, end: 20)
+        .animate(CurvedAnimation(parent: _controller, curve: widget.curve))
       ..addListener(() {
         setState(() {
           _textOpacity = 1.0;
@@ -50,16 +56,17 @@ class _SplashScreen1SubState extends State<SplashScreen1Sub>
       });
     });
 
-    Timer(widget.duration, () {
+    Timer(widget.duration * 1.75, () {
       setState(() {
         _containerSize = 2;
         _containerOpacity = 1;
       });
     });
 
-    Timer(widget.duration, () {
+    Timer(widget.duration * 2.5, () {
       setState(() {
-      Get.off(widget.homePage,transition: Transition.size);
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => widget.homePage));
       });
     });
   }
@@ -87,13 +94,11 @@ class _SplashScreen1SubState extends State<SplashScreen1Sub>
                     curve: Curves.fastLinearToSlowEaseIn,
                     height: _height / _fontSize),
                 AnimatedOpacity(
-                  duration:widget.duration,
+                  duration: widget.duration,
                   opacity: _textOpacity,
-                  child:  Text(
-                    
+                  child: Text(
                     ///ADD YOUR SLOGAN HERE
                     widget.slogan,
-                   
                   ),
                 ),
               ],
@@ -101,21 +106,20 @@ class _SplashScreen1SubState extends State<SplashScreen1Sub>
           ),
           Center(
             child: AnimatedOpacity(
-              duration: widget.duration,
-              curve: Curves.fastLinearToSlowEaseIn,
-              opacity: _containerOpacity,
-              child: AnimatedContainer(
-                  duration:widget.duration,
-                  curve: Curves.fastLinearToSlowEaseIn,
-                  height: _width / _containerSize,
-                  width: _width / _containerSize,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child:widget.logo)
-            ),
+                duration: widget.duration,
+                curve: Curves.fastLinearToSlowEaseIn,
+                opacity: _containerOpacity,
+                child: AnimatedContainer(
+                    duration: widget.duration,
+                    curve: Curves.fastLinearToSlowEaseIn,
+                    height: _width / _containerSize,
+                    width: _width / _containerSize,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: widget.logo)),
           ),
         ],
       ),
@@ -146,4 +150,3 @@ class PageTransition1 extends PageRouteBuilder {
           },
         );
 }
-

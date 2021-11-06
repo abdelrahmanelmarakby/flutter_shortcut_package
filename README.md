@@ -11,29 +11,53 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Flutter Shortcuts
+
+This repo is for anything that can be reusable in flutter like custom widgets 🟥, animations 🌟and more.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+* 1-custom `text` widget to ease its usage
+* 2- custom `text field` widget with cool validation UI
+* 3-super cool animated `splash screen`
+* 4- easy to use `geolocator` location service
+* 5- dart extension to convert default colors to hex colors
+* 6-dynamic theme with persistence that can be implemented in 1 min
+* 7-the easiest localization implementation
+* 8-credit card widget
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Just get the file you want to use.
+
+eg. how to use the Custom text form field?
+
+go to widgets inside this repo then download the file to your project and use it like this.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+```dart
+Position location= await LocatorService.determinePosition();
+```
+
+easy isn't it ??
 
 ```dart
-const like = 'sample';
+TxtForm(
+controller:myEditingController, 
+)
+```
+
+```dart
+Txt(
+"ease", 
+)
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+if you have any idea that you think will be a good addittion contribure or add an issue to the github repo feel stuck on something ? join our telegram group
+
+## <https://t.me/joinchat/p9O1YRT_NlQwZDZk>
+
+### just wish and I will do my best to add it super fast,Please Star and support this repo

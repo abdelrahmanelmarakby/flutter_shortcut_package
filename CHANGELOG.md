@@ -1,4 +1,10 @@
-## [0.0.1] - 2021-11-04
+
+# [0.0.4] - 2021-11-06
+
+*1- Splash Screen fixed
+*2- fixes Geolocator Servcie
+
+# [0.0.1] - 2021-11-04
 
 * 1-custom `text` widget to ease its usage
 * 2- custom `text field` widget with cool validation UI

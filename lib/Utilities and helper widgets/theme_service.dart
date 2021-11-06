@@ -1,5 +1,5 @@
 /// How to use this :
-/// 1- add get and get_storage to you pubspec.yaml file
+/// 1- Make object from Themes Class (ex : Themes themes = new Themes(lightTheme:ThemeData(...), darkTheme:ThemeData(...));)
 /* 2- use GetMaterialApp instead of MaterialApp and add this
 GetMaterialApp(
         title: "theme app",
@@ -13,12 +13,12 @@ GetMaterialApp(
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-class Themes {
-   final ThemeData lightTheme ;
-   final ThemeData darkTheme;
-   Themes({ required this.lightTheme,required this.darkTheme});
-}
 
+class Themes {
+  final ThemeData lightTheme;
+  final ThemeData darkTheme;
+  Themes({required this.lightTheme, required this.darkTheme});
+}
 class ThemeService {
   final _box = GetStorage();
   final _key = 'isDarkMode';
@@ -29,7 +29,6 @@ class ThemeService {
   _saveThemeToBox(bool isDarkMode) => _box.write(_key, isDarkMode);
 
   void switchTheme() {
-
     Get.changeThemeMode(_loadThemeFromBox() ? ThemeMode.light : ThemeMode.dark);
     _saveThemeToBox(!_loadThemeFromBox());
   }
