@@ -4,15 +4,38 @@ This repo is for anything that can be reusable in flutter like custom widgets ðŸ
 
 ## How to Use
 
-Just get the file you want to use.
+go to your ```Android/app/build.gradle file and edit your compileSdkVersion to 31```
 
-eg. how to use the Custom text form field?
+``` dart
+android {
+    compileSdkVersion 31
+```
 
-go to widgets inside this repo then download the file to your project and use it like this.
+## Widgets and how to use them
+
+TextFormField with simple validation indicator
 
 ```dart
 TxtForm(
 controller:myEditingController, 
+)
+```
+
+Text with simplified usage
+
+```dart
+Txt("Hello World",
+color:Colors.blue
+)
+```
+
+SplashScreen With animation
+
+```dart
+SplashScreenWidget(
+    homePage:HomeScreen(),
+    logo:Image.asset("assets/logo");
+    slogan:"PR are welcome"
 )
 ```
 
@@ -26,6 +49,19 @@ and use it like that
 
 ```dart
 Position location= await LocatorService.determinePosition();
+```
+
+this how to add dark and light theme in your project
+
+``` dart
+var myThemes=Theme(ThemeData.light,ThemeData.dark);
+
+MaterialApp(
+    theme:myThemes.light
+    darkTheme:myThemes.dark
+    themeMode:ThemeService().theme
+)
+ThemeService().switchTheme();
 ```
 
 easy isn't it ??

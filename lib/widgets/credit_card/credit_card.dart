@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+
 class CreditCard extends StatefulWidget {
   final String name;
   final String number;
-  final  String cvv;
-  final  String month;
-  final   String year;
+  final String cvv;
+  final String month;
+  final String year;
 
-  const CreditCard({Key? key, this.name=" name", this.number="00000000000", this.cvv="000", this.month="12", this.year="2021"})
+  const CreditCard(
+      {Key? key,
+      this.name = " name",
+      this.number = "00000000000",
+      this.cvv = "000",
+      this.month = "12",
+      this.year = "2021"})
       : super(key: key);
   @override
   _CreditCardState createState() => _CreditCardState();

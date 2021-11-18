@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'text.dart';
+
 class TxtForm extends StatelessWidget {
   const TxtForm(
       {Key? key,
@@ -13,6 +15,7 @@ class TxtForm extends StatelessWidget {
       this.autofillHints,
       this.keyboardType,
       this.fillColor = Colors.white,
+      this.inputFormatters,
       this.validateMode = AutovalidateMode.always})
       : super(key: key);
   final String textFieldName;
@@ -26,6 +29,8 @@ class TxtForm extends StatelessWidget {
   final Color fillColor;
   final AutovalidateMode validateMode;
   final TextInputAction inputAction;
+  final List<TextInputFormatter>? inputFormatters;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -47,6 +52,7 @@ class TxtForm extends StatelessWidget {
           controller: editingController,
           keyboardType: keyboardType,
           validator: validator,
+          inputFormatters: inputFormatters,
           decoration: InputDecoration(
               hintText: textFieldHint,
               //    labelText: "your name".tr,
@@ -55,8 +61,8 @@ class TxtForm extends StatelessWidget {
                   borderSide: const BorderSide(color: Colors.green)),
               fillColor: fillColor,
               filled: true,
-              border: UnderlineInputBorder(
-                  borderRadius: BorderRadius.circular(6))),
+              border:
+                  UnderlineInputBorder(borderRadius: BorderRadius.circular(6))),
         ),
       ],
     );

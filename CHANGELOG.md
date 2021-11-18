@@ -1,8 +1,16 @@
 
+# [0.0.6] - 2021-11-18
+
+* 1- Splash Screen fixed
+* 2- fixes Geolocator Servcie
+* 3- fixes Text Widget not comptiable with dark themes
+* 3- Input formatters added
+* 4- more detailed docs
+
 # [0.0.4] - 2021-11-06
 
-*1- Splash Screen fixed
-*2- fixes Geolocator Servcie
+* 1- Splash Screen fixed
+* 2- fixes Geolocator Servcie
 
 # [0.0.1] - 2021-11-04
 

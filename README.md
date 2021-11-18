@@ -11,9 +11,9 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-# Flutter Shortcuts
+# Ease
 
-This repo is for anything that can be reusable in flutter like custom widgets 🟥, animations 🌟and more.
+This packa is for anything that can be reusable in flutter like custom widgets 🟥, animations 🌟and more.
 
 ## Features
 
@@ -28,19 +28,18 @@ This repo is for anything that can be reusable in flutter like custom widgets �
 
 ## Getting started
 
-Just get the file you want to use.
+go to your ```Android/app/build.gradle file and edit your compileSdkVersion to 31```
 
-eg. how to use the Custom text form field?
-
-go to widgets inside this repo then download the file to your project and use it like this.
+``` dart
+android {
+    compileSdkVersion 31
+```
 
 ## Usage
 
-```dart
-Position location= await LocatorService.determinePosition();
-```
+### Widgets and how to use them
 
-easy isn't it ??
+TextFormField with simple validation indicator
 
 ```dart
 TxtForm(
@@ -48,11 +47,50 @@ controller:myEditingController,
 )
 ```
 
+Text with simplified usage
+
 ```dart
-Txt(
-"ease", 
+Txt("Hello World",
+color:Colors.blue
 )
 ```
+
+SplashScreen With animation
+
+```dart
+SplashScreenWidget(
+    homePage:HomeScreen(),
+    logo:Image.asset("assets/logo");
+    slogan:"PR are welcome"
+)
+```
+
+### Services and how to use them
+
+in each service, you will find what to import and how to use
+
+eg:
+Location Service will tell you to use Getx and geolocator package.
+and use it like that
+
+```dart
+Position location= await LocatorService.determinePosition();
+```
+
+this how to add dark and light theme in your project
+
+``` dart
+var myThemes=Theme(ThemeData.light,ThemeData.dark);
+
+MaterialApp(
+    theme:myThemes.light
+    darkTheme:myThemes.dark
+    themeMode:ThemeService().theme
+)
+ThemeService().switchTheme();
+```
+
+easy isn't it ??
 
 ## Additional information
 

@@ -19,6 +19,7 @@ class Themes {
   final ThemeData darkTheme;
   Themes({required this.lightTheme, required this.darkTheme});
 }
+
 class ThemeService {
   final _box = GetStorage();
   final _key = 'isDarkMode';

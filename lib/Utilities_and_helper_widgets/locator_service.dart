@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
@@ -29,8 +29,10 @@ class LocatorService {
               ),
               onPressed: () {
                 // : GO TO YOUR PREFERED SCREEN
-                Navigator.of(context).pop();
-                Navigator.of(context).pop();
+
+                Get.offAll(backToHomeScreenWidget);
+
+                Get.offAll(backToHomeScreenWidget);
               },
               icon: const Icon(
                 Icons.clear,
@@ -84,8 +86,7 @@ class LocatorService {
               ),
               onPressed: () {
                 //  GO TO YOUR PREFERED SCREEN
-                Navigator.of(context).pop();
-                Navigator.of(context).pop();
+                Get.offAll(backToHomeScreenWidget);
               },
               icon: const Icon(
                 Icons.clear,
@@ -135,8 +136,9 @@ class LocatorService {
                 //  backgroundColor: Colors.green.shade200,
               ),
               onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).pop();
+                Get.offAll(backToHomeScreenWidget);
+
+                Get.offAll(backToHomeScreenWidget);
               },
               icon: const Icon(
                 Icons.clear,
@@ -166,8 +168,9 @@ class LocatorService {
 
       //Geolocator.openLocationSettings();
       if (!serviceEnabled) {
-        Navigator.of(context).pop();
-        Navigator.of(context).pop();
+        Get.offAll(backToHomeScreenWidget);
+
+        Get.offAll(backToHomeScreenWidget);
       }
 
       return Future.error('Location services are disabled.');
@@ -180,4 +183,4 @@ class LocatorService {
         forceAndroidLocationManager: false);
     return location;
   }
-}
+}*/*/

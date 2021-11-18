@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SplashScreen1Sub extends StatefulWidget {
+class SplashScreenWidget extends StatefulWidget {
   final Widget homePage;
   final Widget logo;
   final String slogan;
   final Color backgroundColor;
   final Duration duration;
   final Curve curve;
-  const SplashScreen1Sub(
+  const SplashScreenWidget(
       {required this.homePage,
       Key? key,
       required this.logo,
@@ -21,10 +21,10 @@ class SplashScreen1Sub extends StatefulWidget {
       : super(key: key);
 
   @override
-  _SplashScreen1SubState createState() => _SplashScreen1SubState();
+  _SplashScreenWidgetState createState() => _SplashScreenWidgetState();
 }
 
-class _SplashScreen1SubState extends State<SplashScreen1Sub>
+class _SplashScreenWidgetState extends State<SplashScreenWidget>
     with TickerProviderStateMixin {
   double _fontSize = 2;
   double _containerSize = 1.5;
