@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
+///THIS WIDGET IS USED TO CREATE CREDIT CARD WIDGET FOR PAYMENT
 class CreditCard extends StatefulWidget {
-  final String name;
-  final String number;
-  final String cvv;
-  final String month;
-  final String year;
-
   const CreditCard(
       {Key? key,
       this.name = " name",
@@ -15,6 +10,13 @@ class CreditCard extends StatefulWidget {
       this.month = "12",
       this.year = "2021"})
       : super(key: key);
+
+  final String cvv;
+  final String month;
+  final String name;
+  final String number;
+  final String year;
+
   @override
   _CreditCardState createState() => _CreditCardState();
 }

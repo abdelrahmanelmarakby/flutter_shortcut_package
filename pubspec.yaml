@@ -1,6 +1,7 @@
 name: ease
-description: This repo is for anything that can be reusable in flutter like custom widgets , animations and more.
-version: 0.0.6
+description: This repo is for anything that can be reusable in flutter like
+  custom widgets , animations and more.
+version: 0.0.9
 homepage: https://github.com/abdelrahmanelmarakby/flutter_shortcut
 
 environment:
@@ -10,20 +11,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  get_storage: ^2.0.3
-  get: ^4.3.8
   geolocator: ^7.7.1
+  get: ^4.3.8
+  get_storage: ^2.0.3
+  rxdart: ^0.27.3
 
 dev_dependencies:
+  flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.4
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter.
 flutter:
   # To add assets to your package, add an assets section, like this:
@@ -36,7 +35,6 @@ flutter:
   #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
-
   # To add custom fonts to your package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

@@ -1,15 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SplashScreenWidget extends StatefulWidget {
-  final Widget homePage;
-  final Widget logo;
-  final String slogan;
-  final Color backgroundColor;
-  final Duration duration;
-  final Curve curve;
   const SplashScreenWidget(
       {required this.homePage,
       Key? key,
@@ -20,19 +13,32 @@ class SplashScreenWidget extends StatefulWidget {
       this.curve = Curves.easeIn})
       : super(key: key);
 
+  final Color backgroundColor;
+  final Curve curve;
+  final Duration duration;
+  final Widget homePage;
+  final Widget logo;
+  final String slogan;
+
   @override
   _SplashScreenWidgetState createState() => _SplashScreenWidgetState();
 }
 
 class _SplashScreenWidgetState extends State<SplashScreenWidget>
     with TickerProviderStateMixin {
-  double _fontSize = 2;
-  double _containerSize = 1.5;
-  double _textOpacity = 0.0;
-  double _containerOpacity = 0.0;
-
-  late AnimationController _controller;
   late Animation<double> animation1;
+
+  double _containerOpacity = 0.0;
+  double _containerSize = 1.5;
+  late AnimationController _controller;
+  double _fontSize = 2;
+  double _textOpacity = 0.0;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -72,18 +78,12 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
   }
 
   @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Colors.indigo.shade50,
+      backgroundColor: widget.backgroundColor,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -128,8 +128,6 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
 }
 
 class PageTransition1 extends PageRouteBuilder {
-  final Widget page;
-
   PageTransition1(this.page)
       : super(
           pageBuilder: (context, animation, anotherAnimation) => page,
@@ -149,4 +147,6 @@ class PageTransition1 extends PageRouteBuilder {
             );
           },
         );
+
+  final Widget page;
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'text.dart';
 
+///THIS WIDGET IS USED TO CREATE A TEXT FIELD WITH A LABEL AND A VALIDATION INDICATOR
 class TxtForm extends StatelessWidget {
   const TxtForm(
       {Key? key,
@@ -18,18 +19,19 @@ class TxtForm extends StatelessWidget {
       this.inputFormatters,
       this.validateMode = AutovalidateMode.always})
       : super(key: key);
-  final String textFieldName;
-  final Color textFieldNameColor;
-  final String textFieldHint;
-  final bool obscure;
+
   final String? Function(String?)? validator;
   final Iterable<String>? autofillHints;
   final TextEditingController editingController;
-  final TextInputType? keyboardType;
   final Color fillColor;
-  final AutovalidateMode validateMode;
   final TextInputAction inputAction;
   final List<TextInputFormatter>? inputFormatters;
+  final TextInputType? keyboardType;
+  final bool obscure;
+  final String textFieldHint;
+  final String textFieldName;
+  final Color textFieldNameColor;
+  final AutovalidateMode validateMode;
 
   @override
   Widget build(BuildContext context) {

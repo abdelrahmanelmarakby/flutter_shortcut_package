@@ -1,4 +1,15 @@
 
+# [0.0.9] - 2021-11-18
+
+* 1- Overall code fixes and small updates
+
+# [0.0.8] - 2021-11-18
+
+* 1- New Service to check Connection(ConnectivityService())
+* 2- New animated widget to display items like products(ProductCard())  
+* 3- New animated TabBar widget (EaseTabBar())
+* 4- New GlassContainer widget that implements  GlassMorphism to Container
+
 # [0.0.6] - 2021-11-18
 
 * 1- Splash Screen fixed

@@ -55,6 +55,40 @@ color:Colors.blue
 )
 ```
 
+Glass Container
+
+```dart
+GlassContainer(
+child:Txt("Hello World",
+color:Colors.blue
+    )
+)
+```
+
+Animated ProductCard
+
+```dart
+ ProductCard(
+                                  image: NetworkImage(
+                                      "https://cdn-icons.flaticon.com/png/512/2930/premium/2930679.png?token=exp=1638474347~hmac=f895ca5646f06b4e9703ebd80aa8fa9a"),
+                                  title: "GOOD PACKAGE",
+                                  primarytActionLabel: "PRIMARY ACTION",
+                                  price:"300 EGP",
+                                  rate: 3,
+                                ),
+```
+
+Awesome TabBar and Easy to use
+
+```dart
+EaseTabBar(
+    iconButtons=[]
+    child:Column(
+        
+    )
+)
+```
+
 SplashScreen With animation
 
 ```dart
@@ -98,4 +132,4 @@ if you have any idea that you think will be a good addittion contribure or add a
 
 ## <https://t.me/joinchat/p9O1YRT_NlQwZDZk>
 
-### just wish and I will do my best to add it super fast,Please Star and support this repo
+### I will do my best to add it super fast,Please Star and support this repo

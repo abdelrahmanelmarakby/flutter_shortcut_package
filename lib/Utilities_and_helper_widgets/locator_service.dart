@@ -1,12 +1,11 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
 //* USE LIKE THIS var location=LocatorService.determinePosition();
 class LocatorService {
   static Future<Position?> determinePosition(
-      {required Widget backToHomeScreenWidget,
-      required BuildContext context}) async {
+      {VoidCallback? closeAction, required BuildContext context}) async {
     bool serviceEnabled;
     LocationPermission permission;
     Position location;
@@ -27,13 +26,7 @@ class LocatorService {
                 alignment: Alignment.bottomLeft,
                 //  backgroundColor: Colors.green.shade200,
               ),
-              onPressed: () {
-                // : GO TO YOUR PREFERED SCREEN
-
-                Get.offAll(backToHomeScreenWidget);
-
-                Get.offAll(backToHomeScreenWidget);
-              },
+              onPressed: closeAction,
               icon: const Icon(
                 Icons.clear,
                 color: Colors.redAccent,
@@ -84,10 +77,7 @@ class LocatorService {
                 alignment: Alignment.bottomLeft,
                 //  backgroundColor: Colors.green.shade200,
               ),
-              onPressed: () {
-                //  GO TO YOUR PREFERED SCREEN
-                Get.offAll(backToHomeScreenWidget);
-              },
+              onPressed: closeAction,
               icon: const Icon(
                 Icons.clear,
                 color: Colors.redAccent,
@@ -135,11 +125,7 @@ class LocatorService {
                 alignment: Alignment.bottomLeft,
                 //  backgroundColor: Colors.green.shade200,
               ),
-              onPressed: () {
-                Get.offAll(backToHomeScreenWidget);
-
-                Get.offAll(backToHomeScreenWidget);
-              },
+              onPressed: closeAction,
               icon: const Icon(
                 Icons.clear,
                 color: Colors.redAccent,
@@ -168,9 +154,8 @@ class LocatorService {
 
       //Geolocator.openLocationSettings();
       if (!serviceEnabled) {
-        Get.offAll(backToHomeScreenWidget);
-
-        Get.offAll(backToHomeScreenWidget);
+        closeAction!();
+        return Future.error('Location services are not enabled');
       }
 
       return Future.error('Location services are disabled.');
@@ -183,4 +168,4 @@ class LocatorService {
         forceAndroidLocationManager: false);
     return location;
   }
-}*/*/
+}
