@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
-//* USE LIKE THIS var location=LocatorService.determinePosition();
-class LocatorService {
+///* USE LIKE THIS var location=LocatorService.determinePosition();
+class EaseLocatorService {
   static Future<Position?> determinePosition(
       {VoidCallback? closeAction, required BuildContext context}) async {
     bool serviceEnabled;

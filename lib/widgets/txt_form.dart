@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'text.dart';
 
 ///THIS WIDGET IS USED TO CREATE A TEXT FIELD WITH A LABEL AND A VALIDATION INDICATOR
-class TxtForm extends StatelessWidget {
-  const TxtForm(
+class EaseTxtForm extends StatelessWidget {
+  const EaseTxtForm(
       {Key? key,
       required this.textFieldName,
       required this.editingController,
@@ -39,7 +39,7 @@ class TxtForm extends StatelessWidget {
       children: [
         Container(
           alignment: Alignment.centerLeft,
-          child: Txt(
+          child: EaseTxt(
             textFieldName,
             textAlign: TextAlign.left,
             color: textFieldNameColor,

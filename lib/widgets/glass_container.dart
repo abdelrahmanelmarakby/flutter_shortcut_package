@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 //THIS WIDGET IS USED TO DISPLAY A CONTAINER WITH GLASSMORPIAN BACKGROUND
-class GlassContainer extends StatelessWidget {
-  const GlassContainer(
+class EaseGlassContainer extends StatelessWidget {
+  const EaseGlassContainer(
       {Key? key,
       required this.child,
       this.blur = 10,

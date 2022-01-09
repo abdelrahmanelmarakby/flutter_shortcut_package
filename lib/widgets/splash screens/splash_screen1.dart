@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-class SplashScreenWidget extends StatefulWidget {
-  const SplashScreenWidget(
+class EaseSplashScreen extends StatefulWidget {
+  const EaseSplashScreen(
       {required this.homePage,
       Key? key,
       required this.logo,
@@ -21,10 +21,10 @@ class SplashScreenWidget extends StatefulWidget {
   final String slogan;
 
   @override
-  _SplashScreenWidgetState createState() => _SplashScreenWidgetState();
+  _EaseSplashScreenState createState() => _EaseSplashScreenState();
 }
 
-class _SplashScreenWidgetState extends State<SplashScreenWidget>
+class _EaseSplashScreenState extends State<EaseSplashScreen>
     with TickerProviderStateMixin {
   late Animation<double> animation1;
 

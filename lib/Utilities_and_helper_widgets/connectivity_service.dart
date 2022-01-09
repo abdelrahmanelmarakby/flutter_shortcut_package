@@ -1,7 +1,7 @@
 import 'dart:io';
 
 ///THIS SERVICE IS TO CHECk CONNECTION AND RETURN TRUE OR FALSE
-class ConnectivityService {
+class EaseConnectivityService {
   static bool _isConnected = false;
 
   ///THIS SERVICE IS TO CHECk CONNECTION AND RETURN TRUE OR FALSE depending on the connection

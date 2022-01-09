@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 ///THIS WIDGET IS USED TO CREATE CREDIT CARD WIDGET FOR PAYMENT
-class CreditCard extends StatefulWidget {
-  const CreditCard(
+class EaseCreditCard extends StatefulWidget {
+  const EaseCreditCard(
       {Key? key,
       this.name = " name",
       this.number = "00000000000",
@@ -18,10 +18,10 @@ class CreditCard extends StatefulWidget {
   final String year;
 
   @override
-  _CreditCardState createState() => _CreditCardState();
+  _EaseCreditCardState createState() => _EaseCreditCardState();
 }
 
-class _CreditCardState extends State<CreditCard> {
+class _EaseCreditCardState extends State<EaseCreditCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(

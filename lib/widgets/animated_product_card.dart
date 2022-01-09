@@ -2,8 +2,8 @@ import 'package:ease/ease.dart';
 import 'package:flutter/material.dart';
 
 //THIS WIDGET IS USED TO DISPLAY THE DETAILS OF A PRODUCT  :: IT SHOWS ONLY THE PRODUCT  IMAGE AND ON CLICK OF THE IMAGE IT DISPLAYS THE DETAILS OF THE PRODUCT
-class ProductCard extends StatefulWidget {
-  const ProductCard(
+class EaseProductCard extends StatefulWidget {
+  const EaseProductCard(
       {Key? key,
       required this.image,
       required this.title,
@@ -29,10 +29,10 @@ class ProductCard extends StatefulWidget {
   final String title;
 
   @override
-  _ProductCardState createState() => _ProductCardState();
+  _EaseProductCardState createState() => _EaseProductCardState();
 }
 
-class _ProductCardState extends State<ProductCard>
+class _EaseProductCardState extends State<EaseProductCard>
     with SingleTickerProviderStateMixin {
   bool isOpened = false;
 
@@ -118,7 +118,7 @@ class _ProductCardState extends State<ProductCard>
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Flexible(
-                        child: Txt(
+                        child: EaseTxt(
                           widget.title,
                           weight: FontWeight.w600,
                         ),
