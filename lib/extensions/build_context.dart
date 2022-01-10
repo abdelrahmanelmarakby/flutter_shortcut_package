@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 extension ContextExtensionss on BuildContext {
   /// The same of [MediaQuery.of(context).size]
-  Size get EaseSize => MediaQuery.of(this).size;
+  Size get easeSize => MediaQuery.of(this).size;
 
   /// The same of [MediaQuery.of(context).size.height]
   /// Note: updates when you rezise your screen (like on a browser or
   /// desktop window)
-  double get height => EaseSize.height;
+  double get height => easeSize.height;
 
   /// The same of [MediaQuery.of(context).size.width]
   /// Note: updates when you rezise your screen (like on a browser or
   /// desktop window)
-  double get width => EaseSize.width;
+  double get width => easeSize.width;
 
   /// Gives you the power to get a portion of the height.
   /// Useful for responsive applications.
@@ -24,7 +24,7 @@ extension ContextExtensionss on BuildContext {
   /// [reducedBy] is a percentage value of how much of the height you want
   /// if you for example want 46% of the height, then you reduce it by 56%.
   double heightTransformer({double dividedBy = 1, double reducedBy = 0.0}) {
-    return (EaseSize.height - ((EaseSize.height / 100) * reducedBy)) /
+    return (easeSize.height - ((easeSize.height / 100) * reducedBy)) /
         dividedBy;
   }
 
@@ -38,7 +38,7 @@ extension ContextExtensionss on BuildContext {
   /// [reducedBy] is a percentage value of how much of the width you want
   /// if you for example want 46% of the width, then you reduce it by 56%.
   double widthTransformer({double dividedBy = 1, double reducedBy = 0.0}) {
-    return (EaseSize.width - ((EaseSize.width / 100) * reducedBy)) / dividedBy;
+    return (easeSize.width - ((easeSize.width / 100) * reducedBy)) / dividedBy;
   }
 
   /// Divide the height proportionally by the given value
@@ -91,7 +91,7 @@ extension ContextExtensionss on BuildContext {
   double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
 
   /// get the shortestSide from screen
-  double get mediaQueryShortestSide => EaseSize.shortestSide;
+  double get mediaQueryShortestSide => easeSize.shortestSide;
 
   /// True if width be larger than 800
   bool get showNavbar => (width > 800);
@@ -150,7 +150,7 @@ extension ContextExtensionss on BuildContext {
     assert(
         watch != null || mobile != null || tablet != null || desktop != null);
 
-    var deviceWidth = EaseSize.width;
+    var deviceWidth = easeSize.width;
     //big screen width can display smaller sizes
     final strictValues = [
       if (deviceWidth >= 1200) desktop, //desktop is allowed
