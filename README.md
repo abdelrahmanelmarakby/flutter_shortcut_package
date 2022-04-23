@@ -18,13 +18,16 @@ This packa is for anything that can be reusable in flutter like custom widgets ð
 ## Features
 
 * 1-custom `text` widget to ease its usage
-* 2- custom `text field` widget with cool validation UI
+* 2- custom `text field` widget with cool validation
 * 3-super cool animated `splash screen`
-* 4- easy to use `geolocator` location service
-* 5- dart extension to convert default colors to hex colors
-* 6-dynamic theme with persistence that can be implemented in 1 min
-* 7-the easiest localization implementation
+* 4- easy to use `geolocator` and `connectivity` service in one line
+* 5- Super useful `extensions`.
+* 6-dynamic theme with persistence that can be implemented in 1 min (coming soon)
+* 7-the easiest localization implementation (coming soon)
 * 8-credit card widget
+* 9-Animated `ProductCard` widget
+* 10- 2 awesome Animated `NavBars` widgets and easy to use
+* many validators to use
 
 ## Getting started
 
@@ -42,7 +45,7 @@ android {
 TextFormField with simple validation indicator
 
 ```dart
-TxtForm(
+EaseTxtForm(
 controller:myEditingController, 
 )
 ```
@@ -50,7 +53,7 @@ controller:myEditingController,
 Text with simplified usage
 
 ```dart
-Txt("Hello World",
+EaseTxt("Hello World",
 color:Colors.blue
 )
 ```
@@ -58,7 +61,7 @@ color:Colors.blue
 Glass Container
 
 ```dart
-GlassContainer(
+EaseGlassContainer(
 child:Txt("Hello World",
 color:Colors.blue
     )
@@ -68,7 +71,7 @@ color:Colors.blue
 Animated ProductCard
 
 ```dart
- ProductCard(
+ EaseProductCard(
                                   image: NetworkImage(
                                       "https://cdn-icons.flaticon.com/png/512/2930/premium/2930679.png?token=exp=1638474347~hmac=f895ca5646f06b4e9703ebd80aa8fa9a"),
                                   title: "GOOD PACKAGE",
@@ -92,7 +95,7 @@ EaseTabBar(
 SplashScreen With animation
 
 ```dart
-SplashScreenWidget(
+EaseSplashScreen(
     homePage:HomeScreen(),
     logo:Image.asset("assets/logo");
     slogan:"PR are welcome"
@@ -108,20 +111,7 @@ Location Service will tell you to use Getx and geolocator package.
 and use it like that
 
 ```dart
-Position location= await LocatorService.determinePosition();
-```
-
-this how to add dark and light theme in your project
-
-``` dart
-var myThemes=Theme(ThemeData.light,ThemeData.dark);
-
-MaterialApp(
-    theme:myThemes.light
-    darkTheme:myThemes.dark
-    themeMode:ThemeService().theme
-)
-ThemeService().switchTheme();
+Position location= await EaseLocatorService.determinePosition();
 ```
 
 easy isn't it ??

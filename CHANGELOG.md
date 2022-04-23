@@ -1,4 +1,12 @@
 
+# [0.0.10] - 2022-1-10
+
+* 1- Overall code fixes and small updates
+* 2- padding extension to widgets
+* 3- BuildContext Extensions
+* 4- String extensions
+* 5- New Animated Navbar (credits to flash_tab_Bar2)
+
 # [0.0.9] - 2021-11-18
 
 * 1- Overall code fixes and small updates

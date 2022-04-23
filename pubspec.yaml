@@ -1,7 +1,7 @@
 name: ease
 description: This repo is for anything that can be reusable in flutter like
   custom widgets , animations and more.
-version: 0.0.9
+version: 0.0.10
 homepage: https://github.com/abdelrahmanelmarakby/flutter_shortcut
 
 environment:
@@ -11,7 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  geolocator: ^7.7.1
+ 
+  geolocator: ^8.0.1
   get: ^4.3.8
   get_storage: ^2.0.3
   rxdart: ^0.27.3
