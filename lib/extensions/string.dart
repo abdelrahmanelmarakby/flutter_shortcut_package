@@ -1,6 +1,6 @@
 import 'package:ease/extensions/ease_utils.dart';
 
-extension GetStringUtils on String {
+extension StringUtils on String {
   bool get isNum => EaseUtils.isNum(this);
 
   bool get isNumericOnly => EaseUtils.isNumericOnly(this);
